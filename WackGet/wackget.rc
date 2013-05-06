@@ -1,0 +1,348 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "..\WGDLL\main.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\WGDLL\\main.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAIN                ICON    DISCARDABLE     "res\\wackget.ico"
+IDI_BUSY                ICON    DISCARDABLE     "res\\busy.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "L&oad Queue\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "&Save Queue\tCtrl+S",         ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "&Preferences...",             ID_FILE_PREFERENCES
+        MENUITEM "Open Download &Folder",       ID_FILE_OPENDOWNLOADFOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Item"
+    BEGIN
+        MENUITEM "Move &Up\tAlt+Up",            ID_ITEM_MOVEUP
+        MENUITEM "Move D&own\tAlt+Down",        ID_ITEM_MOVEDOWN
+        MENUITEM SEPARATOR
+        MENUITEM "&Pause\tCtrl+P",              ID_ITEM_PAUSE
+        MENUITEM "Remove\t&Del",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Force\tCtrl+Enter",          ID_ITEM_FORCE
+        MENUITEM "Re-&queue\tCtrl+Q",           ID_ITEM_REQUEUE
+        MENUITEM SEPARATOR
+        MENUITEM "Ru&n\tEnter",                 ID_ITEM_RUN
+        MENUITEM "&Copy URL\tCtrl+C",           ID_EDIT_COPY
+    END
+    POPUP "&Queue"
+    BEGIN
+        MENUITEM "Add &New Item...\tCtrl+N",    ID_FILE_NEW
+        MENUITEM "Add From &Clipboard\tCtrl+V", ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Clear All Complete\tCtrl+&K", ID_QUEUE_CLEARALLCOMPLETE
+        MENUITEM "Select &All",                 ID_EDIT_SELECT_ALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About WackGet...",           ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Help\tF1",                   ID_HELP
+    END
+END
+
+IDM_TRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "Add &New Item...",            ID_FILE_NEW
+        MENUITEM "Add From &Clipboard",         ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Preferences...",             ID_FILE_PREFERENCES
+        MENUITEM "Open Download &Folder",       ID_FILE_OPENDOWNLOADFOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAIN ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_VIEW_ALWAYSONTOP,    VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "K",            ID_QUEUE_CLEARALLCOMPLETE, VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_ITEM_PAUSE,          VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      ID_ITEM_FORCE,          VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_ITEM_REQUEUE,        VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_DOWN,        ID_ITEM_MOVEDOWN,       VIRTKEY, ALT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_RETURN,      ID_ITEM_RUN,            VIRTKEY, NOINVERT
+    VK_UP,          ID_ITEM_MOVEUP,         VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PREFS_GENERAL DIALOG DISCARDABLE  0, 0, 211, 164
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Locations",IDC_STATIC,5,3,201,44
+    LTEXT           "Download &directory:",IDC_STATIC,13,15,64,8
+    EDITTEXT        IDC_DOWNLOADDIR,13,27,136,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,155,26,18,14
+    GROUPBOX        "Queue",IDC_STATIC,5,50,201,108
+    LTEXT           "Ma&ximum concurrent downloads (zero for no limit):",
+                    IDC_STATIC,13,61,157,8
+    EDITTEXT        IDC_MAXTHREADS,172,59,27,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS | UDS_HOTTRACK,181,74,11,13
+    LTEXT           "If file exists:",IDC_STATIC,13,74,37,8
+    CONTROL         "&Resume",IDC_RESUME,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,57,74,42,10
+    CONTROL         "Over&write",IDC_OVERWRITE,"Button",BS_AUTORADIOBUTTON,
+                    104,74,46,10
+    LTEXT           "When removing unfinished items from queue:",IDC_STATIC,
+                    13,87,142,8
+    CONTROL         "D&elete partial file",IDC_RM_DELETE,"Button",
+                    BS_AUTORADIOBUTTON,15,99,68,10
+    CONTROL         "Lea&ve partial file",IDC_RM_LEAVE,"Button",
+                    BS_AUTORADIOBUTTON,84,99,67,10
+    CONTROL         "&Prompt",IDC_RM_PROMPT,"Button",BS_AUTORADIOBUTTON,153,
+                    99,38,10
+    CONTROL         "Automatically &clear completed downloads",
+                    IDC_CLEARCOMPLETED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,114,145,10
+    CONTROL         "Clear All Complete clears &failed downloads",
+                    IDC_CLEARFAILEDTOO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,127,148,10
+    CONTROL         "&Log downloaded files (WackGet.log)",IDC_LOG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,140,131,10
+END
+
+IDD_PREFS_INTEGRATION DIALOG DISCARDABLE  0, 0, 211, 164
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Integration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Windows",IDC_STATIC,5,3,201,44
+    CONTROL         "A&ssociate .wgq files with WackGet",IDC_ASSOCIATE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,16,125,10
+    CONTROL         "Use &hot key to toggle WackGet:",IDC_HOTKEY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,29,118,10
+    CTEXT           "Win + W",IDC_HOTKEY_FIELD,132,27,48,12,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    GROUPBOX        "Browser",IDC_STATIC,5,50,201,69
+    CONTROL         "&Integration with Internet Explorer (Requires IE restart)",
+                    IDC_IE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,61,181,
+                    10
+    CONTROL         "Display in &right-click menu (Requires IE restart)",
+                    IDC_IE_CONTEXT_MENU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,30,74,161,10
+    CONTROL         "Use &mouse click + key combo:",IDC_IE_KEYBOARD_CLICK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,87,113,10
+    LTEXT           "Click plus:",IDC_CLICK_PLUS_LABEL,47,101,33,8
+    CTEXT           "Control",IDC_CLICK_PLUS_FIELD,84,99,48,12,
+                    SS_CENTERIMAGE | SS_SUNKEN
+END
+
+IDD_PREFS_DISPLAY DIALOG DISCARDABLE  0, 0, 211, 164
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Display"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "View",IDC_STATIC,5,3,201,143
+    CONTROL         "Show &menu bar",IDC_MENUBAR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,14,65,10
+    CONTROL         "Show &status bar",IDC_STATUSBAR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,27,67,10
+    CONTROL         "Show column &headers",IDC_COLUMNHEADERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,40,86,10
+    CONTROL         "Show &gridlines",IDC_SHOWGRIDLINES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,53,61,10
+    CONTROL         "Show stat&us in system tray",IDC_TRAYSTATUS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,66,99,10
+    CONTROL         "Always on &top (Ctrl+A)",IDC_ALWAYSONTOP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,78,85,10
+    LTEXT           "Show icon in:",IDC_STATIC,13,91,44,8
+    CONTROL         "Task&bar only",IDC_SHOW_TASKBAR,"Button",
+                    BS_AUTORADIOBUTTON,30,102,57,10
+    CONTROL         "S&ystem tray only",IDC_SHOW_SYSTRAY,"Button",
+                    BS_AUTORADIOBUTTON,30,115,67,10
+    CONTROL         "Taskbar a&nd system tray",IDC_SHOW_BOTH,"Button",
+                    BS_AUTORADIOBUTTON,30,128,93,10
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 65
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About WackGet"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAIN,IDC_STATIC,11,6,20,20
+    LTEXT           "",IDC_VERSION,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2002-2003 Millweed",IDC_STATIC,40,36,119,
+                    8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           THE_URL,IDC_LINK,40,21,
+                    122,8,SS_NOTIFY
+    LTEXT           "License:",IDC_STATIC,40,47,28,8
+    LTEXT           "GNU General Public License",IDC_LICENSE,72,47,92,8,
+                    SS_NOTIFY
+END
+
+IDD_ADDITEM DIALOG DISCARDABLE  0, 0, 180, 54
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add new item..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Enter the URL of the new item:",IDC_STATIC,5,5,98,8
+    EDITTEXT        IDC_URL,5,17,170,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,71,35,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,125,35,50,14
+END
+
+IDD_PREFS_PROXY DIALOG DISCARDABLE  0, 0, 211, 164
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Proxy"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Proxy",IDC_STATIC,5,3,201,77
+    CONTROL         "Use pro&xy server",IDC_PROXY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,14,69,10
+    LTEXT           "&Server:",IDC_STATIC,30,27,24,8
+    EDITTEXT        IDC_PROXY_SERVER,68,26,131,12,ES_AUTOHSCROLL
+    LTEXT           "&Username:",IDC_STATIC,30,44,35,8
+    EDITTEXT        IDC_PROXY_USERNAME,68,43,131,12,ES_AUTOHSCROLL
+    LTEXT           "&Password:",IDC_STATIC,30,61,34,8
+    EDITTEXT        IDC_PROXY_PASSWORD,68,60,131,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display application information, version number and copyright"
+    ID_APP_EXIT             "Quit the application"
+    ID_HELP                 "Get help on application functions"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_PREFERENCES     "Customize application settings"
+    ID_FILE_OPENDOWNLOADFOLDER "Open the download folder"
+    ID_ITEM_MOVEUP          "Move selected download up one spot in the queue"
+    ID_ITEM_MOVEDOWN        "Move selected download down one spot in the queue"
+    ID_ITEM_PAUSE           "Pause selected download"
+    ID_ITEM_FORCE           "Immediately force selected download; retry download if failed"
+    ID_ITEM_REQUEUE         "Add selected item to the queue again"
+    ID_ITEM_RUN             "Run selected download with its default application"
+    ID_QUEUE_CLEARALLCOMPLETE "Prune all completed downloads"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Remove selected download; terminate download if active"
+    ID_EDIT_COPY            "Copy selected URL to Clipboard"
+    ID_EDIT_PASTE           "Parse Clipboard for URLs and add to queue"
+    ID_EDIT_SELECT_ALL      "Select all downloads"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Manually enter a new URL to download"
+    ID_FILE_OPEN            "Load saved queue from file"
+    ID_FILE_SAVE            "Save current queue to file"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

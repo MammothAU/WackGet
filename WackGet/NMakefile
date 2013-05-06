@@ -1,0 +1,40 @@
+
+TOP=..
+!INCLUDE $(TOP)\vars.mk
+
+TARGETS=$(OUT_DIR)\WackGet.exe
+
+PCH=pch.h
+RCSOURCES=wackget.rc
+CSOURCES=main.c\
+	frame.c\
+	frame_create.c\
+	list.c\
+	list_additem.c\
+	list_drag.c\
+	list_util.c\
+	droptarget.c\
+	menu.c\
+	item_menu.c\
+	queue_menu.c\
+	queue_save.c\
+	tray.c\
+	util.c\
+	memory.c\
+	prefs.c\
+	prefs_general.c\
+	prefs_integr.c\
+	prefs_display.c\
+	prefs_proxy.c\
+	about.c
+LIBS=ole32.lib\
+	user32.lib\
+	advapi32.lib\
+	comctl32.lib\
+	shell32.lib\
+	WGDLL.lib\
+	gdi32.lib\
+	comdlg32.lib\
+	shlwapi.lib
+
+!INCLUDE $(TOP)\rules.mk

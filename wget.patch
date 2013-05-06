@@ -1,0 +1,11 @@
+http.c
+@@ -1601,6 +1603,8 @@
+       else
+ 	locf = opt.output_document;
+ 
++  wack_setname(locf);
++
+       /* Time?  */
+       tms = time_str (NULL);
+       /* Get the new location (with or without the redirection).  */
+

@@ -1,0 +1,84 @@
+
+WackGet Version History
+
+1.2.4 - Bugfixes
+  Corrected a bug related to invalid memory access that caused a crash on Windows Vista/7
+  Corrected a bug where a download may appear stuck for 10-15 seconds before starting
+
+1.2.3 - New features
+  Recompiled with wget 1.10.2
+  Large file support - now works properly with files > 2^31 bytes
+  Better support for https URLs using curl's cacert bundle (http://curl.haxx.se/docs/caextract.html)
+
+1.2.2 - Bugfixes and new features
+  Added proxy support
+  Added hotkey to toggle WackGet
+  Added .wgq file association to preferences dialog
+  Fixed Litestep tray icon bug
+  Show status in systray on by default
+  Created installer-less release
+
+1.2.1 - Bugfixes and new features
+  Fixed hidden state not being saved
+  Fixed tray-only to taskbar-only while hidden bug
+  Fixed to allow only one instance of WackGet
+  Added sending command line to WackGet if already running
+  Added opening multiple queue files
+  Added dragging & dropping queue files
+
+1.2 - Rewrite and new features
+  Rewrote entirely in C changed build to use makefiles
+  Added copying multiple items' urls
+  Added running multiple items
+  Updated wget.patch to patch wget v1.8.2
+  Added copying & pasting or dragging html from browser (Supports IE and Mozilla)
+  Added icon to and shell open support for queue files
+  Added Load Queue and Save Queue shortcuts
+  Improved memory allocation to be faster and more efficient
+  Replaced Retry with Force in item menu
+  Added referrer for anti-leech links
+  Removed auto-takeover downloads in IE
+
+1.1.2 - Bugfixes
+  Fixed WGET.EXE spazzing out when connection dies
+  Using normal process priorities for the time being (thanks Alex)
+
+1.1.1 - Win98 bugfixes
+  Fixed SHELL32.DLL missing export: StrRStrIA error under Win98
+  Fixed saved queue-loading error under Win98
+
+1.1 - New features
+  Uninstaller warns about IE using WackGet.dll
+  Installer warns about existing installation
+  Regenerates tray icon & taskbar button if Explorer is restarted (thanks arhra)
+  Prompts to save queue on exit if any downloads still in progress
+  Added HTTP error code to failed downloads if available
+  Added File->Save Queue and File->Load Queue, with prompt to replace or append
+  Runs with low/idle system priority
+  Added Help->Help shortcut (F1) and button on preferences dialog
+  Added thousand-place-commification for status texts
+  Added Delete/Leave/Prompt preference for removing partial downloads
+  Added "Show in Taskbar/Systray/both" preference like Winamp
+  Added auto-scroll when moving items
+  Added Clear All Complete preference clears failed items too
+  Added idle/busy/blink-done tray icon preference
+  Added "Retry" and "Re-queue" to item menu
+  Added log finished downloads preference
+  Added IE Integration via these preferences:
+    A context menu item ("WackGet it!")
+    A keyboard and mouse click combo (Ctrl+Click)
+    Automatically taking over downloads
+  Added "Select All" to queue menu
+  Added "Open Download Folder" to file and tray menu
+  Added "Run" to item menu
+  Added estimated time remaining to Speed column
+  Allowed reordering of column headers by dragging
+  Accepts URLs from the command line and adds them to queue
+  Added preference to toggle grid lines in list
+  Ctrl+A toggles AlwaysOnTop mode
+  Added a WM_COPYDATA command to add URLs from other apps
+  Made smarter about finding support files (ie. WGET.EXE)
+  Updated WackGet and wget mods to build under VC7
+
+1.0 - Initial Release
+  Implemented initial feature set

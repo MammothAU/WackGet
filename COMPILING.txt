@@ -1,0 +1,3 @@
+Use NMake (nmake NMakefile) to perform a compilation.
+
+You may need to change the path to the Microsoft Platform SDK (in vars.mk) for a successful compilation.

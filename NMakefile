@@ -1,0 +1,8 @@
+
+TOP=.
+!INCLUDE $(TOP)\vars.mk
+
+SUBDIRS=WGDLL\
+	WackGet
+
+!INCLUDE $(TOP)\rules.mk

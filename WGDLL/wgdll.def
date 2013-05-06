@@ -1,0 +1,10 @@
+
+LIBRARY      "WGDLL.dll"
+
+EXPORTS
+    ; Explicit exports can go here
+  DllMain              PRIVATE
+  DllRegisterServer
+  DllUnregisterServer
+  DllCanUnloadNow      PRIVATE
+  DllGetClassObject    PRIVATE

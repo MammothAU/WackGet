@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>WackGet Documentation</title>
+</head>
+
+<body>
+
+<table cellpadding="5" cellspacing="5" width="100%">
+<tr>
+	<td bgcolor="#eeeeee">
+		<font face="Verdana, Helvetica, Sans serif" size="4">
+		<b>
+		<p>WackGet version 1.2.2</p>
+		</b>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td>
+		<font face="Verdana, Helvetica, Sans serif" size="2">
+		<p>
+		<b>Table of contents:</b>
+		</p>
+		<p>
+		<ol>
+			<li><a href="#whatis">What is WackGet?</a>
+			<li><a href="#using">Using WackGet</a>
+			<li><a href="#menus">Menus</a>
+			<li>License: <a href="LICENSE.txt">GNU General Public License</a> (<a href="http://www.gnu.org/copyleft/gpl.html">online</a>)
+			<li><a href="CHANGES.txt">Version History</a>
+</ol>
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<a name="whatis"></a>
+	<td bgcolor="#eeeeee">
+		<font face="Verdana, Helvetica, Sans serif" size="2">
+		<b>
+		<p>1. What is WackGet?</p>
+		</b>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td>
+		<font face="Verdana, Helvetica, Sans serif" size="2">
+		<p>WackGet is a download manager. It maintains a queue of files and downloads them in the order you specify.</p>
+		<p>WackGet is a minimalist application. It doesn't tax system resources, doesn't require a lot of screen real estate, and doesn't include extraneous features. It's free, ad-free, and is lovingly developed and maintained by the hip people at <a href="http://www.millweed.com">Millweed.com</a>.</p>
+		<p>WackGet uses <a href="http://www.gnu.org/software/wget/wget.html">wget</a> to download files. (In the WackGet program directory, you'll see a copy of wget.exe.) We had to modify wget slightly.</p>
+		<p>For the latest version of WackGet and other stuff, visit <a href="http://www.millweed.com/projects/wackget/">http://www.millweed.com/projects/wackget/</a>.</p>
+		<p>WackGet is released under the terms of the <a href="LICENSE.txt">GNU General Public License</a>, which can also be found <a href="http://www.gnu.org/copyleft/gpl.html">online</a>.</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<a name="using"></a>
+	<td bgcolor="#eeeeee">
+		<font face="Verdana, Helvetica, Sans serif" size="2">
+		<b>
+		<p>2. Using WackGet</p>
+		</b>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td>
+		<font face="Verdana, Helvetica, Sans serif" size="2">
+		<p>It's simple: you run WackGet, add items to the queue, and sit back and have a <a href="http://www.widmer.com/beers/hefeweizen.html">beer</a> while your files download.</p>
+		<p>To add items to the queue, you can choose <i>Add New Item</i> or <i>Add From Clipboard</i> from the <i><a href="#menus">Queue</a></i> menu, or you can simply drag a link over from your web browser.</p>
+		<p>Everything downloads from the top down (files at the bottom last), and the number of consecutive downloads is defined in the Preferences dialog box.</p></p>
+		<p>Stuff in the download queue can be reordered by dragging it around or selecting it and using <i>Move Up</i> or <i>Move Down</i> the <a href="#menus">Item</a> menu.</p>
+		<p>Status of items is displayed in the <i>Status</i> column.</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<a name="menus"></a>
+	<td bgcolor="#eeeeee">
+		<font face="Verdana, Helvetica, Sans serif" size="2">
+		<b>
+		<p>3. Menus</p>
+		</b>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td>
+		<font face="Verdana, Helvetica, Sans serif" size="2">
+		<p><b>File:</b></p>
+		<blockquote>
+		<em>Load Queue</em> - Loads saved queue file.<br>
+		<em>Save Queue</em> - Saves current queue to file.<br>
+		<i>Preferences...</i> - Displays the application preferences dialog.<br>
+		<em>Open Download Folder</em> - Displays the download directory.<br>
+		<i>Exit</i> - Quits the application. Prompts for confirmation if any items are currently downloading.
+		</blockquote>
+		</p>
+		<p><b>Item:</b></p>
+		<blockquote>
+		<p><i>Move Up/Down</i> -  Moves the selected items up or down the queue list.<br>
+		<i>Pause/Resume</i> - Pauses the selected items, or resumes if paused.<br>
+		<i>Remove</i> - Deletes the selected items from the queue list. Prompt for confirmation if specified in the application preferences.<br>
+		<em>Force</em> - Immediately forces attempt to download selected item; retries download if already failed.<br>
+		<em>Requeue</em> - Re-adds selected item to the queue.<br>
+		<em>Run</em> - Executes selected file with default application.<br>
+		<i>Copy URL</i> - Copies the URL of the selected item to the clipboard.
+		</p>
+		</blockquote>
+		<p><b>Queue:</b></p>
+		<blockquote>
+		<i>Add New Item...</i> - Displays dialog for manually entering new item URL. "http://" is prefixed to URLs if another protocol is not specified.<br>
+		<i>Add From Clipboard</i> - Parses clipboard for valid URLs and adds them to the queue.<br>
+		<i>Clear All Complete</i> - Prunes all complete items from the queue list. Also clears failed items if specifed in the application preferences.<br>
+		<em>Select All</em> - Selects all items in the queue.
+		</blockquote>
+		<p><b>Help:</b></p>
+		<blockquote>
+		<p><i>About WackGet...</i> - Displays application information, version and copyright.<br>
+		<i>Help...</i> - Loads this help file in your web browser.</p>
+		<p>
+		</blockquote>
+		</font>
+	</td>
+</tr>
+</table>
+<font color="#808080" size="1">document authored 8/20/03 @ 3:47pm</font>
+</body>
+</html>

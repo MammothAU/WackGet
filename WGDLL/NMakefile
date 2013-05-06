@@ -1,0 +1,17 @@
+
+TOP=..
+!INCLUDE $(TOP)\vars.mk
+
+DLL_TARGETS=$(OUT_DIR)\WGDLL.dll
+DEFS=$(DEFS) /DWGDLL_EXPORTS
+LDFLAGS=$(LDFLAGS) /def:WGDLL.def
+
+PCH=pch.h
+CSOURCES=main.c\
+	bho.c\
+	util.c
+LIBS=advapi32.lib\
+	user32.lib\
+	shlwapi.lib
+
+!INCLUDE $(TOP)\rules.mk
